@@ -1,0 +1,1 @@
+CREATE TABLE users (id SERIAL PRIMARY KEY, username VARCHAR(100), email VARCHAR(100)); CREATE TABLE domain_admins (id SERIAL PRIMARY KEY, admin_name VARCHAR(100), admin_email VARCHAR(100));
