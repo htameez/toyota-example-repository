@@ -1,1 +1,0 @@
-I want to create two tables, one for users and another for domain admins
