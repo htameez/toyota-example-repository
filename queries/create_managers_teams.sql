@@ -1,0 +1,1 @@
+CREATE TABLE managers (id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100)); CREATE TABLE teams (id SERIAL PRIMARY KEY, name VARCHAR(100), manager_id INT REFERENCES managers(id));
