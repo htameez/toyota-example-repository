@@ -1,0 +1,1 @@
+SELECT account_id, customer_id, days_past_due, outstanding_balance, last_payment_date, risk_score, recommended_action FROM loan_accounts WHERE status = 'active';
