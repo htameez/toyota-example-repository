@@ -1,0 +1,1 @@
+CREATE TABLE team_leads (id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100), phone VARCHAR(15)); CREATE TABLE developers (id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100), programming_language VARCHAR(50));
