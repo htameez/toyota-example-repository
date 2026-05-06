@@ -1,14 +1,1 @@
-SELECT
-    a.account_id,
-    a.customer_name,
-    a.email,
-    a.phone,
-    ap.attempted_at,
-    ap.failure_reason
-FROM
-    customer_accounts a
-JOIN
-    autopay_attempts ap ON a.account_id = ap.account_id
-WHERE
-    ap.status = 'failed' AND
-    ap.attempted_at >= NOW() - INTERVAL '24 HOURS';
+SELECT c.account_id, c.customer_name, c.email, c.phone, a.attempted_at, a.amount, a.failure_reason FROM customer_accounts c JOIN autopay_attempts a ON c.account_id = a.account_id WHERE a.status = 'failed' AND a.attempted_at >= NOW() - INTERVAL '24 hours';
