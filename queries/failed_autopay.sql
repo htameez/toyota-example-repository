@@ -7,9 +7,9 @@ SELECT
     ap.amount, 
     ap.failure_reason
 FROM 
-    customer_accounts ca
+    autopay_attempts ap
 JOIN 
-    autopay_attempts ap ON ca.account_id = ap.account_id
+    customer_accounts ca ON ap.account_id = ca.account_id
 WHERE 
-    ap.status = 'failed'
-    AND ap.attempted_at >= (NOW() - INTERVAL '1 day');
+    ap.status = 'failed' 
+    AND ap.attempted_at >= NOW() - INTERVAL '24 HOURS';
